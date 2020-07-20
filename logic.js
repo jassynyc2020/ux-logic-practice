@@ -20,9 +20,12 @@
     otherwise return "red";
 */
 function getColor(number) {
-  // Uncomment and complete
-  return /* ( Your code Here ) ?  Your code Here  :  Your code Here */;
-}
+  getColor == 15 ? "blue" : "red"
+     
+  }
+
+  /* ( Your code Here ) ?  Your code Here  :  Your code Here */;
+
 
 /* 
    -------TESTS---------------------------------------------------------------
@@ -49,7 +52,9 @@ console.log(getColor(10) === "red");
     if the brightness is greater than or equal to 200, then return "on"
 */
 function lightStatus(brightness) {
-  let result = "";
+  let result = "controllableLightbulbBrightness";
+    if "controllableLightbulbBrightness" === 0 ? "off" : "dimmed"
+      else >=200 "on"
   // Put your logic here
   return result;
 }
@@ -87,16 +92,26 @@ console.log(lightStatus(255) === "on");
 */
 
 function getLightBulbStatusDisplayString(status) {
-  let result = "";
-  /* uncomment and complete
-    switch( your code here ) {
-      case "your code here": 
-        your code here;
+  let result = ["on", "off", "dimmed", "offline", "deleted", "missing", "broken"];
+    switch( result ) {
+      case "dimmed": 
+        alert("The house is nice and dim");
         break;
-      etc...
+      case "deleted":
+        alert("the lightbulb has bee removed from the system");
+        break;
+      case "off":
+        alert("The house is dark");
+        break;
+      case "broken":
+        alert("the house is dark and we can't turn light on");
+        break;
+      case "offline or missing":
+        alert("The house is dark and we can't find the lightbulb!");
+        break;
+      default:
+        alert("Something is wrong!");
     }
-    */
-  return result;
 }
 
 /* 
@@ -226,8 +241,9 @@ function updateLights(
   // You should be using if else statements and the function arguments
   // example of turning a light on
   turnOnLight("livingRoomLight");
-  // example of turning off a light
+    if lightIsOne == "somebodyIsHome" questionmark "theyAreWatchingTV"
   turnOffLight("livingRoomLight");
+    if lightIsOff == "theywenttoBed" questionmark : "itisDarkOutside"
 }
 
 /* 
