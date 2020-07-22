@@ -276,47 +276,31 @@ function updateLights(
   theyAreCooking,
   theyWentToBed
 ) {
-  // Write your code here!  You don't need to return anything, just call the given functions
-  // You should be using if else statements and the function arguments
-  // example of turning a light on
   turnOnLight("livingRoomLight");
-  // example of turning off a light
   turnOffLight("livingRoomLight");
-}
-// livingRoomLight
-// diningRoomLight
-// kitchenLight
-// frontPorchLight
-// bedroomLight
 
-//   If it's dark out, the porch light should be on.  If it's not dark, then it's off.
-if (itIsDarkOutside) {
-  turnOnLight("frontPorchLight");
-} else {
-  turnOffLight("frontPorchLight");
-}
-//   If nobody home, then turn all the lights off (except the porch light).
-//   If someone is home but they haven't gone to bed, then the living room and dining room lights should be on.
-if (somebodyIsHome) {
-  if (!theyWentToBed) {
-    turnOnLight("livingRoomLight");
-    turnOnLight("diningRoomLight");
+  if (itIsDarkOutside) {
+    turnOnLight("frontPorchLight");
+  } else {
+    turnOffLight("frontPorchLight");
+  }
+
+  if (somebodyIsHome) {
+    if (!theyWentToBed) {
+      turnOnLight("livingRoomLight");
+      turnOnLight("diningRoomLight");
+    }
+
+    if (theyAreCooking) {
+      turnOnLight("kitchenLight");
+    } else if (theyAreWatchingTV) {
+      turnOffLight("livingRoomLight");
+      turnOffLight("diningRoomLight");
+    } else if (theyWentToBed) {
+      turnOnLight("bedroomLight");
+    }
   }
 }
-//   if someone is cooking, then the kitchen light should be on.
-if (theyAreCooking) {
-  turnOnLight(kitchenLight);
-}
-//   However, if they are watching TV, then turn off the livingroom and dining room lights.
-if (theyAreWatchingTV) {
-  turnOffLight(livingRoomLight);
-  turnOffLight(diningRoomLight);
-}
-//   If they are in bed, then the bedroom light should be on.
-if (theyWentToBed) {
-  turnOnLight(bedroomLight);
-}
-
 /* 
    -------TESTS---------------------------------------------------------------
    Run these commands to make sure you did it right. They should all be true.
